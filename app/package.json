@@ -1,0 +1,14 @@
+{
+  "name": "icon-viewer",
+  "version": "1.0.0",
+  "description": "Visualizador de icones",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Vaz Villalobos Martins",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
