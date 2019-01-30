@@ -28,15 +28,18 @@ app.get('/', (req, res) => {
     })
 })
 
+listFiles(iconsPath, data => {
+    console.log(data)
+})
+
 // Lista arquivos no diretorio
 function listFiles(path, callback) {
-    fs.readdir(path, { withFileTypes: true }, (error, files) => {
-        //console.log(files)
-        /*files.forEach(file => {
-            fs.stat(iconsPath + '/' + file, stats => {
-                console.log('stats', stats)
+    fs.readdir(path, (error, files) => {
+        files.forEach(file => {
+            fs.stat(iconsPath + '/' + file, (error, stats) => {
+                console.log(stats.isFile())
             })
-        })*/
+        })
         if ( error ) {
             console.log(error)
             callback(error)
